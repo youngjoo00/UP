@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct MarketCoinView: View {
+    
+    @StateObject
+    private var viewModel = MarketCoinViewModel()
+    
     var body: some View {
-        VStack {
-            Text("gd")
+        NavigationStack {
+            VStack {
+            
+            }
+            .navigationTitle("Market")
         }
-        .padding()
     }
 }
 
