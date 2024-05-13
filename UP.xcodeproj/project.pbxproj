@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E227A9A2BF223DC002C0D93 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227A992BF223DC002C0D93 /* MyProfileView.swift */; };
+		8E227A9F2BF224D9002C0D93 /* MarketCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227A9E2BF224D9002C0D93 /* MarketCoinViewModel.swift */; };
+		8E227AA22BF224F5002C0D93 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AA12BF224F5002C0D93 /* ViewModelType.swift */; };
 		8EDF99752BF201A6008E3085 /* UPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99742BF201A6008E3085 /* UPApp.swift */; };
 		8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99762BF201A6008E3085 /* MainTabView.swift */; };
 		8EDF99792BF201A8008E3085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDF99782BF201A8008E3085 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		8E227A992BF223DC002C0D93 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		8E227A9E2BF224D9002C0D93 /* MarketCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCoinViewModel.swift; sourceTree = "<group>"; };
+		8E227AA12BF224F5002C0D93 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8EDF99712BF201A6008E3085 /* UP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDF99742BF201A6008E3085 /* UPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPApp.swift; sourceTree = "<group>"; };
 		8EDF99762BF201A6008E3085 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,31 @@
 			path = TabView;
 			sourceTree = "<group>";
 		};
+		8E227A9C2BF224B8002C0D93 /* MarketCoin */ = {
+			isa = PBXGroup;
+			children = (
+				8EDF99982BF21FED008E3085 /* MarketCoinView.swift */,
+				8E227A9E2BF224D9002C0D93 /* MarketCoinViewModel.swift */,
+			);
+			path = MarketCoin;
+			sourceTree = "<group>";
+		};
+		8E227A9D2BF224C7002C0D93 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				8E227A992BF223DC002C0D93 /* MyProfileView.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		8E227AA02BF224EC002C0D93 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8E227AA12BF224F5002C0D93 /* ViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		8EDF99682BF201A6008E3085 = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +108,9 @@
 		8EDF99732BF201A6008E3085 /* UP */ = {
 			isa = PBXGroup;
 			children = (
-				8EDF99832BF201C0008E3085 /* Network */,
 				8EDF99822BF201BB008E3085 /* Scenes */,
+				8EDF99832BF201C0008E3085 /* Network */,
+				8E227AA02BF224EC002C0D93 /* Protocol */,
 				8EDF99742BF201A6008E3085 /* UPApp.swift */,
 				8EDF99782BF201A8008E3085 /* Assets.xcassets */,
 				8EDF997A2BF201A8008E3085 /* Preview Content */,
@@ -100,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				8E227A9B2BF2240C002C0D93 /* TabView */,
-				8EDF99982BF21FED008E3085 /* MarketCoinView.swift */,
-				8E227A992BF223DC002C0D93 /* MyProfileView.swift */,
+				8E227A9C2BF224B8002C0D93 /* MarketCoin */,
+				8E227A9D2BF224C7002C0D93 /* MyProfile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -211,7 +241,9 @@
 				8EDF99852BF201D0008E3085 /* NetworkManager.swift in Sources */,
 				8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */,
 				8EDF99932BF203FF008E3085 /* UserRouter.swift in Sources */,
+				8E227A9F2BF224D9002C0D93 /* MarketCoinViewModel.swift in Sources */,
 				8E227A9A2BF223DC002C0D93 /* MyProfileView.swift in Sources */,
+				8E227AA22BF224F5002C0D93 /* ViewModelType.swift in Sources */,
 				8EDF99952BF206D5008E3085 /* UpbitRouter.swift in Sources */,
 				8EDF99892BF2028F008E3085 /* APIError.swift in Sources */,
 				8EDF99992BF21FED008E3085 /* MarketCoinView.swift in Sources */,
