@@ -59,6 +59,7 @@ extension MarketCoinViewModel {
         input.marketFetchTrigger
             .flatMap { _ in
                 NetworkManager.shared.callAPI(response: Markets.self, request: UpbitRouter.market)
+                    .receive(on: DispatchQueue.main)
                     .catch { [weak self] error in // 에러 발생시 Alert
                         print("에러: ", error.localizedDescription)
                         self?.output.errorMessage = error.localizedDescription
