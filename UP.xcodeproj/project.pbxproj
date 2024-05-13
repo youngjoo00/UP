@@ -11,6 +11,12 @@
 		8E227A9F2BF224D9002C0D93 /* MarketCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227A9E2BF224D9002C0D93 /* MarketCoinViewModel.swift */; };
 		8E227AA22BF224F5002C0D93 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AA12BF224F5002C0D93 /* ViewModelType.swift */; };
 		8E227AA62BF226A5002C0D93 /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AA52BF226A5002C0D93 /* ButtonWrapper.swift */; };
+		8E227AA92BF24D7E002C0D93 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AA82BF24D7E002C0D93 /* WebSocketManager.swift */; };
+		8E227AAB2BF24DA3002C0D93 /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AAA2BF24DA3002C0D93 /* OrderBook.swift */; };
+		8E227AAD2BF25A9C002C0D93 /* TickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AAC2BF25A9C002C0D93 /* TickerManager.swift */; };
+		8E227AAF2BF25B37002C0D93 /* OrderbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AAE2BF25B37002C0D93 /* OrderbookView.swift */; };
+		8E227AB22BF25B49002C0D93 /* OrderbookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AB12BF25B49002C0D93 /* OrderbookViewModel.swift */; };
+		8E227AB42BF25BE0002C0D93 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AB32BF25BE0002C0D93 /* Ticker.swift */; };
 		8EDF99752BF201A6008E3085 /* UPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99742BF201A6008E3085 /* UPApp.swift */; };
 		8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99762BF201A6008E3085 /* MainTabView.swift */; };
 		8EDF99792BF201A8008E3085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDF99782BF201A8008E3085 /* Assets.xcassets */; };
@@ -31,6 +37,12 @@
 		8E227A9E2BF224D9002C0D93 /* MarketCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCoinViewModel.swift; sourceTree = "<group>"; };
 		8E227AA12BF224F5002C0D93 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		8E227AA52BF226A5002C0D93 /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
+		8E227AA82BF24D7E002C0D93 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		8E227AAA2BF24DA3002C0D93 /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
+		8E227AAC2BF25A9C002C0D93 /* TickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerManager.swift; sourceTree = "<group>"; };
+		8E227AAE2BF25B37002C0D93 /* OrderbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderbookView.swift; sourceTree = "<group>"; };
+		8E227AB12BF25B49002C0D93 /* OrderbookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderbookViewModel.swift; sourceTree = "<group>"; };
+		8E227AB32BF25BE0002C0D93 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		8EDF99712BF201A6008E3085 /* UP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDF99742BF201A6008E3085 /* UPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPApp.swift; sourceTree = "<group>"; };
 		8EDF99762BF201A6008E3085 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 			children = (
 				8EDF99982BF21FED008E3085 /* MarketCoinView.swift */,
 				8E227A9E2BF224D9002C0D93 /* MarketCoinViewModel.swift */,
+				8E227AB02BF25B3A002C0D93 /* Orderbook */,
 			);
 			path = MarketCoin;
 			sourceTree = "<group>";
@@ -106,6 +119,24 @@
 			path = CustomModifier;
 			sourceTree = "<group>";
 		};
+		8E227AA72BF24D6B002C0D93 /* WebSockect */ = {
+			isa = PBXGroup;
+			children = (
+				8E227AA82BF24D7E002C0D93 /* WebSocketManager.swift */,
+				8E227AAC2BF25A9C002C0D93 /* TickerManager.swift */,
+			);
+			path = WebSockect;
+			sourceTree = "<group>";
+		};
+		8E227AB02BF25B3A002C0D93 /* Orderbook */ = {
+			isa = PBXGroup;
+			children = (
+				8E227AAE2BF25B37002C0D93 /* OrderbookView.swift */,
+				8E227AB12BF25B49002C0D93 /* OrderbookViewModel.swift */,
+			);
+			path = Orderbook;
+			sourceTree = "<group>";
+		};
 		8EDF99682BF201A6008E3085 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +158,7 @@
 			children = (
 				8EDF99822BF201BB008E3085 /* Scenes */,
 				8EDF99832BF201C0008E3085 /* Network */,
+				8E227AA72BF24D6B002C0D93 /* WebSockect */,
 				8E227AA02BF224EC002C0D93 /* Protocol */,
 				8EDF99742BF201A6008E3085 /* UPApp.swift */,
 				8EDF99782BF201A8008E3085 /* Assets.xcassets */,
@@ -171,6 +203,8 @@
 			children = (
 				8EDF998D2BF202C7008E3085 /* Error.swift */,
 				8EDF99962BF20A85008E3085 /* Market.swift */,
+				8E227AAA2BF24DA3002C0D93 /* OrderBook.swift */,
+				8E227AB32BF25BE0002C0D93 /* Ticker.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -257,19 +291,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDF99872BF20265008E3085 /* Router.swift in Sources */,
+				8E227AAB2BF24DA3002C0D93 /* OrderBook.swift in Sources */,
 				8EDF99852BF201D0008E3085 /* NetworkManager.swift in Sources */,
 				8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */,
+				8E227AA92BF24D7E002C0D93 /* WebSocketManager.swift in Sources */,
 				8EDF99932BF203FF008E3085 /* UserRouter.swift in Sources */,
 				8E227A9F2BF224D9002C0D93 /* MarketCoinViewModel.swift in Sources */,
 				8E227A9A2BF223DC002C0D93 /* MyProfileView.swift in Sources */,
 				8E227AA22BF224F5002C0D93 /* ViewModelType.swift in Sources */,
+				8E227AAF2BF25B37002C0D93 /* OrderbookView.swift in Sources */,
 				8EDF99952BF206D5008E3085 /* UpbitRouter.swift in Sources */,
 				8EDF99892BF2028F008E3085 /* APIError.swift in Sources */,
 				8EDF99992BF21FED008E3085 /* MarketCoinView.swift in Sources */,
 				8EDF998E2BF202C7008E3085 /* Error.swift in Sources */,
+				8E227AAD2BF25A9C002C0D93 /* TickerManager.swift in Sources */,
 				8EDF99752BF201A6008E3085 /* UPApp.swift in Sources */,
+				8E227AB42BF25BE0002C0D93 /* Ticker.swift in Sources */,
 				8EDF99912BF203B7008E3085 /* TargetType.swift in Sources */,
 				8EDF99972BF20A85008E3085 /* Market.swift in Sources */,
+				8E227AB22BF25B49002C0D93 /* OrderbookViewModel.swift in Sources */,
 				8E227AA62BF226A5002C0D93 /* ButtonWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

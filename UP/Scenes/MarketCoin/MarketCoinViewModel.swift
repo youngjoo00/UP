@@ -43,9 +43,12 @@ extension MarketCoinViewModel {
         var markets: Markets = []
         var isShowingAlertView: Bool = false
         var errorMessage: String = ""
+        //var Tickers: [Ticker] = []
     }
     
     func transform() {
+        var testMarkets = PassthroughSubject<Markets, Never>()
+        
         input.marketFetchTrigger
             .flatMap { _ in
                 NetworkManager.shared.callAPI(response: Markets.self, request: UpbitRouter.market)
@@ -58,8 +61,32 @@ extension MarketCoinViewModel {
             } // 에러가 있든 없든 진행
             .sink { [weak self] markets in
                 self?.output.markets = markets
+                testMarkets.send(markets)
             }
             .store(in: &self.cancellables)
+        
+        testMarkets
+            .sink { markets in
+                let codes = markets
+                    .map { $0.market }
+                TickerManager.shared.openWebSocket()
+                
+                TickerManager.shared.send(
+                    """
+                       [{"ticket":"test"},{"type":"ticker","codes":\(codes)}]
+
+                    """
+                )
+            }
+            .store(in: &cancellables)
+        
+        TickerManager.shared.tickerSubject
+            .sink { [weak self] ticker in
+                print(ticker)
+                //output.Tickers = [ticker]
+            }
+            .store(in: &cancellables)
+
     }
 }
 

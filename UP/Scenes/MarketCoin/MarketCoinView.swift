@@ -12,7 +12,7 @@ struct MarketCoinView: View {
     @StateObject
     private var viewModel = MarketCoinViewModel()
     
-    var body: some View {
+    var body: some View { 
         NavigationStack {
             VStack {
                 List {
@@ -36,7 +36,7 @@ struct MarketCoinView: View {
             Button("재시도") {
                 viewModel.action(.marketFetchTrigger)
             }
-        }
+        } 
     }
 }
 
