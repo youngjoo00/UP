@@ -159,20 +159,20 @@
 			isa = PBXGroup;
 			children = (
 				8EDF998F2BF20376008E3085 /* Router */,
-				8EDF998A2BF202B2008E3085 /* Response */,
+				8EDF998A2BF202B2008E3085 /* ResponseModel */,
 				8EDF99842BF201D0008E3085 /* NetworkManager.swift */,
 				8EDF99882BF2028F008E3085 /* APIError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		8EDF998A2BF202B2008E3085 /* Response */ = {
+		8EDF998A2BF202B2008E3085 /* ResponseModel */ = {
 			isa = PBXGroup;
 			children = (
 				8EDF998D2BF202C7008E3085 /* Error.swift */,
 				8EDF99962BF20A85008E3085 /* Market.swift */,
 			);
-			path = Response;
+			path = ResponseModel;
 			sourceTree = "<group>";
 		};
 		8EDF998F2BF20376008E3085 /* Router */ = {
