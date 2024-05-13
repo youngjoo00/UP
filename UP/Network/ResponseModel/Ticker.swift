@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ticker: Codable {
+struct Ticker: Decodable, Hashable {
     let type: String // 타입
     let code: String // 마켓 코드 (예: KRW-BTC)
     let openingPrice: Double // 시가
@@ -27,19 +27,6 @@ struct Ticker: Codable {
     let accTradePrice24h: Double // 24시간 누적 거래대금
     let tradeDate: String // 최근 거래 일자(UTC)
     let tradeTime: String // 최근 거래 시각(UTC)
-    let tradeTimestamp: Int64 // 체결 타임스탬프 (milliseconds)
-    let askBid: String // 매수/매도 구분
-    let accAskVolume: Double // 누적 매도량
-    let accBidVolume: Double // 누적 매수량
-    let highest52WeekPrice: Double // 52주 최고가
-    let highest52WeekDate: String // 52주 최고가 달성일
-    let lowest52WeekPrice: Double // 52주 최저가
-    let lowest52WeekDate: String // 52주 최저가 달성일
-    let marketState: String // 거래상태
-    let isTradingSuspended: Bool // 거래 정지 여부
-    let marketWarning: String // 유의 종목 여부
-    let timestamp: Int64 // 타임스탬프 (millisecond)
-    let streamType: String // 스트림 타입
     
     enum CodingKeys: String, CodingKey {
         case type, code
@@ -60,18 +47,5 @@ struct Ticker: Codable {
         case accTradePrice24h = "acc_trade_price_24h"
         case tradeDate = "trade_date"
         case tradeTime = "trade_time"
-        case tradeTimestamp = "trade_timestamp"
-        case askBid = "ask_bid"
-        case accAskVolume = "acc_ask_volume"
-        case accBidVolume = "acc_bid_volume"
-        case highest52WeekPrice = "highest_52_week_price"
-        case highest52WeekDate = "highest_52_week_date"
-        case lowest52WeekPrice = "lowest_52_week_price"
-        case lowest52WeekDate = "lowest_52_week_date"
-        case marketState = "market_state"
-        case isTradingSuspended = "is_trading_suspended"
-        case marketWarning = "market_warning"
-        case timestamp
-        case streamType = "stream_type"
     }
 }

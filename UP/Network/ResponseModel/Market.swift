@@ -9,8 +9,7 @@ import Foundation
 
 typealias Markets = [Market]
 
-struct Market: Hashable, Decodable, Identifiable {
-    let id = UUID()
+struct Market: Decodable, Hashable {
     let market, koreanName, englishName: String
     
     enum CodingKeys: String, CodingKey {

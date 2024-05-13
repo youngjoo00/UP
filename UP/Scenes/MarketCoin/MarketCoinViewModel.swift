@@ -40,14 +40,21 @@ extension MarketCoinViewModel {
     }
     
     struct Output {
-        var markets: Markets = []
         var isShowingAlertView: Bool = false
         var errorMessage: String = ""
-        //var Tickers: [Ticker] = []
+        var coinInfo: [CoinInfo] = []
+        var changeIndex: Int?
+    }
+    
+    // Hashable 을 사용할 때 내부 구조체도 모두 Hashable 프로토콜을 채택한 상태여야 한다!!!!
+    struct CoinInfo: Hashable, Identifiable {
+        var id = UUID()
+        var marketData: Market
+        var ticker: Ticker
     }
     
     func transform() {
-        var testMarkets = PassthroughSubject<Markets, Never>()
+        let MarketsSubject = PassthroughSubject<Markets, Never>()
         
         input.marketFetchTrigger
             .flatMap { _ in
@@ -59,13 +66,17 @@ extension MarketCoinViewModel {
                         return Just(Markets()) // 비어있는 Market 배열 생성해서 반환
                     }
             } // 에러가 있든 없든 진행
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] markets in
-                self?.output.markets = markets
-                testMarkets.send(markets)
+                self?.output.coinInfo = markets.map { market in
+                    CoinInfo(marketData: market, ticker: Ticker(type: "", code: "", openingPrice: 0, highPrice: 0, lowPrice: 0, tradePrice: 0, prevClosingPrice: 0, change: "", changePrice: 0, signedChangePrice: 0, changeRate: 0, signedChangeRate: 0, tradeVolume: 0, accTradeVolume: 0, accTradeVolume24h: 0, accTradePrice: 0, accTradePrice24h: 0, tradeDate: "", tradeTime: ""))
+                }
+                 
+                MarketsSubject.send(markets)
             }
             .store(in: &self.cancellables)
         
-        testMarkets
+        MarketsSubject
             .sink { markets in
                 let codes = markets
                     .map { $0.market }
@@ -80,13 +91,23 @@ extension MarketCoinViewModel {
             }
             .store(in: &cancellables)
         
-        TickerManager.shared.tickerSubject
-            .sink { [weak self] ticker in
-                print(ticker)
-                //output.Tickers = [ticker]
+        // 이렇게 묶는구나..
+        Publishers.CombineLatest(MarketsSubject, TickerManager.shared.tickerSubject)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] markets, ticker in
+                
+                // 1. firstIndex 로 첫번쨰로 맞는 값의 인덱스를 찾고, 그 인덱스에 값을 넣어주는 형식으로
+                let index = markets.firstIndex { info in
+                    return info.market == ticker.code
+                }
+                
+                // 2. 아웃풋으로 방출
+                if let index {
+                    self?.output.coinInfo[index].ticker = ticker
+                    self?.output.changeIndex = index
+                }
             }
             .store(in: &cancellables)
-
     }
 }
 
