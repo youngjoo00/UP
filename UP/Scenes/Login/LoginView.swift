@@ -20,7 +20,9 @@ struct LoginView: View {
                 PointBorderTextField(placeholder: "이메일을 입력하세요", text: $viewModel.email)
                 PointBorderTextField(placeholder: "패스워드를 입력하세요", text: $viewModel.password)
                 
-                PointBackgroundButton(text: "로그인")
+                PointBackgroundButton(text: "로그인") {
+                    print("Login")
+                }
                 
                 SignUpButton(text: "회원가입") {
                     viewModel.isShowingSignUp = true
@@ -34,7 +36,7 @@ struct LoginView: View {
                 SignUpView()
             }
         } // NavigationStack
-       
+        .tint(.point)
     }
 }
 

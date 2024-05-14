@@ -10,7 +10,7 @@ import SwiftUI
 struct PointBackgroundButton: View {
     
     let text: String
-    
+    let action: () -> Void
     var body: some View {
         Text(text)
             .foregroundStyle(.white)
@@ -20,7 +20,7 @@ struct PointBackgroundButton: View {
             .background(.point)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .wrapToButton {
-                print("login")
+                action()
             }
             
     }
