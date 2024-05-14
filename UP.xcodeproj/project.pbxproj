@@ -17,6 +17,13 @@
 		8E227AAF2BF25B37002C0D93 /* OrderbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AAE2BF25B37002C0D93 /* OrderbookView.swift */; };
 		8E227AB22BF25B49002C0D93 /* OrderbookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AB12BF25B49002C0D93 /* OrderbookViewModel.swift */; };
 		8E227AB42BF25BE0002C0D93 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AB32BF25BE0002C0D93 /* Ticker.swift */; };
+		8E227AB72BF367AD002C0D93 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AB62BF367AD002C0D93 /* LoginView.swift */; };
+		8E227AB92BF36B86002C0D93 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AB82BF36B86002C0D93 /* LoginViewModel.swift */; };
+		8E227ABC2BF37456002C0D93 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227ABB2BF37456002C0D93 /* String+.swift */; };
+		8E227ABF2BF39045002C0D93 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227ABE2BF39045002C0D93 /* SignUpView.swift */; };
+		8E227AC12BF39065002C0D93 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC02BF39065002C0D93 /* SignUpViewModel.swift */; };
+		8E227AC32BF39137002C0D93 /* PointBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC22BF39137002C0D93 /* PointBorderTextField.swift */; };
+		8E227AC52BF3931F002C0D93 /* PointBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC42BF3931F002C0D93 /* PointBackgroundButton.swift */; };
 		8EDF99752BF201A6008E3085 /* UPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99742BF201A6008E3085 /* UPApp.swift */; };
 		8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99762BF201A6008E3085 /* MainTabView.swift */; };
 		8EDF99792BF201A8008E3085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDF99782BF201A8008E3085 /* Assets.xcassets */; };
@@ -43,6 +50,13 @@
 		8E227AAE2BF25B37002C0D93 /* OrderbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderbookView.swift; sourceTree = "<group>"; };
 		8E227AB12BF25B49002C0D93 /* OrderbookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderbookViewModel.swift; sourceTree = "<group>"; };
 		8E227AB32BF25BE0002C0D93 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		8E227AB62BF367AD002C0D93 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8E227AB82BF36B86002C0D93 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8E227ABB2BF37456002C0D93 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		8E227ABE2BF39045002C0D93 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		8E227AC02BF39065002C0D93 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		8E227AC22BF39137002C0D93 /* PointBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBorderTextField.swift; sourceTree = "<group>"; };
+		8E227AC42BF3931F002C0D93 /* PointBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBackgroundButton.swift; sourceTree = "<group>"; };
 		8EDF99712BF201A6008E3085 /* UP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDF99742BF201A6008E3085 /* UPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPApp.swift; sourceTree = "<group>"; };
 		8EDF99762BF201A6008E3085 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -70,12 +84,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E227A9B2BF2240C002C0D93 /* TabView */ = {
+		8E227A9B2BF2240C002C0D93 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
 				8EDF99762BF201A6008E3085 /* MainTabView.swift */,
 			);
-			path = TabView;
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 		8E227A9C2BF224B8002C0D93 /* MarketCoin */ = {
@@ -107,6 +121,8 @@
 		8E227AA32BF22677002C0D93 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E227AC22BF39137002C0D93 /* PointBorderTextField.swift */,
+				8E227AC42BF3931F002C0D93 /* PointBackgroundButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +153,32 @@
 			path = Orderbook;
 			sourceTree = "<group>";
 		};
+		8E227AB52BF36783002C0D93 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8E227AB62BF367AD002C0D93 /* LoginView.swift */,
+				8E227AB82BF36B86002C0D93 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8E227ABA2BF37445002C0D93 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E227ABB2BF37456002C0D93 /* String+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E227ABD2BF39021002C0D93 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8E227ABE2BF39045002C0D93 /* SignUpView.swift */,
+				8E227AC02BF39065002C0D93 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		8EDF99682BF201A6008E3085 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +201,7 @@
 				8EDF99822BF201BB008E3085 /* Scenes */,
 				8EDF99832BF201C0008E3085 /* Network */,
 				8E227AA72BF24D6B002C0D93 /* WebSockect */,
+				8E227ABA2BF37445002C0D93 /* Extension */,
 				8E227AA02BF224EC002C0D93 /* Protocol */,
 				8EDF99742BF201A6008E3085 /* UPApp.swift */,
 				8EDF99782BF201A8008E3085 /* Assets.xcassets */,
@@ -178,7 +221,9 @@
 		8EDF99822BF201BB008E3085 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8E227A9B2BF2240C002C0D93 /* TabView */,
+				8E227AB52BF36783002C0D93 /* Login */,
+				8E227ABD2BF39021002C0D93 /* SignUp */,
+				8E227A9B2BF2240C002C0D93 /* MainTab */,
 				8E227A9C2BF224B8002C0D93 /* MarketCoin */,
 				8E227A9D2BF224C7002C0D93 /* MyProfile */,
 				8E227AA32BF22677002C0D93 /* Views */,
@@ -290,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E227AB92BF36B86002C0D93 /* LoginViewModel.swift in Sources */,
 				8EDF99872BF20265008E3085 /* Router.swift in Sources */,
 				8E227AAB2BF24DA3002C0D93 /* OrderBook.swift in Sources */,
 				8EDF99852BF201D0008E3085 /* NetworkManager.swift in Sources */,
@@ -298,14 +344,20 @@
 				8EDF99932BF203FF008E3085 /* UserRouter.swift in Sources */,
 				8E227A9F2BF224D9002C0D93 /* MarketCoinViewModel.swift in Sources */,
 				8E227A9A2BF223DC002C0D93 /* MyProfileView.swift in Sources */,
+				8E227AB72BF367AD002C0D93 /* LoginView.swift in Sources */,
+				8E227ABC2BF37456002C0D93 /* String+.swift in Sources */,
 				8E227AA22BF224F5002C0D93 /* ViewModelType.swift in Sources */,
 				8E227AAF2BF25B37002C0D93 /* OrderbookView.swift in Sources */,
 				8EDF99952BF206D5008E3085 /* UpbitRouter.swift in Sources */,
+				8E227AC12BF39065002C0D93 /* SignUpViewModel.swift in Sources */,
 				8EDF99892BF2028F008E3085 /* APIError.swift in Sources */,
 				8EDF99992BF21FED008E3085 /* MarketCoinView.swift in Sources */,
+				8E227ABF2BF39045002C0D93 /* SignUpView.swift in Sources */,
 				8EDF998E2BF202C7008E3085 /* Error.swift in Sources */,
 				8E227AAD2BF25A9C002C0D93 /* TickerManager.swift in Sources */,
+				8E227AC52BF3931F002C0D93 /* PointBackgroundButton.swift in Sources */,
 				8EDF99752BF201A6008E3085 /* UPApp.swift in Sources */,
+				8E227AC32BF39137002C0D93 /* PointBorderTextField.swift in Sources */,
 				8E227AB42BF25BE0002C0D93 /* Ticker.swift in Sources */,
 				8EDF99912BF203B7008E3085 /* TargetType.swift in Sources */,
 				8EDF99972BF20A85008E3085 /* Market.swift in Sources */,

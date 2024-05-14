@@ -22,6 +22,7 @@ struct MainTabView: View {
                     Text("프로필")
                 }
         }
+        .tint(.point)
     }
 }
 

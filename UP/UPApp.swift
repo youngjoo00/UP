@@ -11,7 +11,7 @@ import SwiftUI
 struct UPApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            LoginView()
         }
     }
 }
