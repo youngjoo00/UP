@@ -20,7 +20,7 @@ struct LoginView: View {
                 PointBorderTextField(placeholder: "이메일을 입력하세요", text: $viewModel.email)
                 PointBorderTextField(placeholder: "패스워드를 입력하세요", text: $viewModel.password)
                 
-                PointBackgroundButton(text: "Login")
+                PointBackgroundButton(text: "로그인")
                 
                 SignUpButton(text: "회원가입") {
                     viewModel.isShowingSignUp = true
@@ -29,8 +29,7 @@ struct LoginView: View {
                 Spacer()
                     .frame(height: 100)
             } // VStack
-            .padding(.leading, 30)
-            .padding(.trailing, 30)
+            .padding(.horizontal, 30)
             .navigationDestination(isPresented: $viewModel.isShowingSignUp) {
                 SignUpView()
             }

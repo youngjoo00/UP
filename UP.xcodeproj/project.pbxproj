@@ -24,6 +24,12 @@
 		8E227AC12BF39065002C0D93 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC02BF39065002C0D93 /* SignUpViewModel.swift */; };
 		8E227AC32BF39137002C0D93 /* PointBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC22BF39137002C0D93 /* PointBorderTextField.swift */; };
 		8E227AC52BF3931F002C0D93 /* PointBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC42BF3931F002C0D93 /* PointBackgroundButton.swift */; };
+		8E227AC82BF39DF6002C0D93 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC72BF39DF6002C0D93 /* UserRequest.swift */; };
+		8E227ACA2BF39E71002C0D93 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AC92BF39E71002C0D93 /* UserResponse.swift */; };
+		8E227ACC2BF39F04002C0D93 /* PathVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227ACB2BF39F04002C0D93 /* PathVersion.swift */; };
+		8E227ACE2BF39F3C002C0D93 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227ACD2BF39F3C002C0D93 /* HTTPHeader.swift */; };
+		8E227AD02BF39FFD002C0D93 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8E227ACF2BF39FFD002C0D93 /* .gitignore */; };
+		8E227AD22BF3A023002C0D93 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E227AD12BF3A023002C0D93 /* PrivateKey.swift */; };
 		8EDF99752BF201A6008E3085 /* UPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99742BF201A6008E3085 /* UPApp.swift */; };
 		8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF99762BF201A6008E3085 /* MainTabView.swift */; };
 		8EDF99792BF201A8008E3085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDF99782BF201A8008E3085 /* Assets.xcassets */; };
@@ -57,6 +63,12 @@
 		8E227AC02BF39065002C0D93 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		8E227AC22BF39137002C0D93 /* PointBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBorderTextField.swift; sourceTree = "<group>"; };
 		8E227AC42BF3931F002C0D93 /* PointBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBackgroundButton.swift; sourceTree = "<group>"; };
+		8E227AC72BF39DF6002C0D93 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		8E227AC92BF39E71002C0D93 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		8E227ACB2BF39F04002C0D93 /* PathVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathVersion.swift; sourceTree = "<group>"; };
+		8E227ACD2BF39F3C002C0D93 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		8E227ACF2BF39FFD002C0D93 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8E227AD12BF3A023002C0D93 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
 		8EDF99712BF201A6008E3085 /* UP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDF99742BF201A6008E3085 /* UPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPApp.swift; sourceTree = "<group>"; };
 		8EDF99762BF201A6008E3085 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -179,9 +191,18 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		8E227AC62BF39DD5002C0D93 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				8E227AC72BF39DF6002C0D93 /* UserRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		8EDF99682BF201A6008E3085 = {
 			isa = PBXGroup;
 			children = (
+				8E227ACF2BF39FFD002C0D93 /* .gitignore */,
 				8EDF99732BF201A6008E3085 /* UP */,
 				8EDF99722BF201A6008E3085 /* Products */,
 			);
@@ -206,6 +227,7 @@
 				8EDF99742BF201A6008E3085 /* UPApp.swift */,
 				8EDF99782BF201A8008E3085 /* Assets.xcassets */,
 				8EDF997A2BF201A8008E3085 /* Preview Content */,
+				8E227AD12BF3A023002C0D93 /* PrivateKey.swift */,
 			);
 			path = UP;
 			sourceTree = "<group>";
@@ -235,23 +257,25 @@
 		8EDF99832BF201C0008E3085 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8EDF998F2BF20376008E3085 /* Router */,
-				8EDF998A2BF202B2008E3085 /* ResponseModel */,
 				8EDF99842BF201D0008E3085 /* NetworkManager.swift */,
 				8EDF99882BF2028F008E3085 /* APIError.swift */,
+				8EDF998F2BF20376008E3085 /* Router */,
+				8E227AC62BF39DD5002C0D93 /* Request */,
+				8EDF998A2BF202B2008E3085 /* Response */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		8EDF998A2BF202B2008E3085 /* ResponseModel */ = {
+		8EDF998A2BF202B2008E3085 /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				8EDF998D2BF202C7008E3085 /* Error.swift */,
 				8EDF99962BF20A85008E3085 /* Market.swift */,
 				8E227AAA2BF24DA3002C0D93 /* OrderBook.swift */,
 				8E227AB32BF25BE0002C0D93 /* Ticker.swift */,
+				8E227AC92BF39E71002C0D93 /* UserResponse.swift */,
 			);
-			path = ResponseModel;
+			path = Response;
 			sourceTree = "<group>";
 		};
 		8EDF998F2BF20376008E3085 /* Router */ = {
@@ -261,6 +285,8 @@
 				8EDF99902BF203B7008E3085 /* TargetType.swift */,
 				8EDF99922BF203FF008E3085 /* UserRouter.swift */,
 				8EDF99942BF206D5008E3085 /* UpbitRouter.swift */,
+				8E227ACB2BF39F04002C0D93 /* PathVersion.swift */,
+				8E227ACD2BF39F3C002C0D93 /* HTTPHeader.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -324,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDF997C2BF201A8008E3085 /* Preview Assets.xcassets in Resources */,
+				8E227AD02BF39FFD002C0D93 /* .gitignore in Resources */,
 				8EDF99792BF201A8008E3085 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,11 +365,14 @@
 				8E227AB92BF36B86002C0D93 /* LoginViewModel.swift in Sources */,
 				8EDF99872BF20265008E3085 /* Router.swift in Sources */,
 				8E227AAB2BF24DA3002C0D93 /* OrderBook.swift in Sources */,
+				8E227ACC2BF39F04002C0D93 /* PathVersion.swift in Sources */,
 				8EDF99852BF201D0008E3085 /* NetworkManager.swift in Sources */,
 				8EDF99772BF201A6008E3085 /* MainTabView.swift in Sources */,
+				8E227ACA2BF39E71002C0D93 /* UserResponse.swift in Sources */,
 				8E227AA92BF24D7E002C0D93 /* WebSocketManager.swift in Sources */,
 				8EDF99932BF203FF008E3085 /* UserRouter.swift in Sources */,
 				8E227A9F2BF224D9002C0D93 /* MarketCoinViewModel.swift in Sources */,
+				8E227AC82BF39DF6002C0D93 /* UserRequest.swift in Sources */,
 				8E227A9A2BF223DC002C0D93 /* MyProfileView.swift in Sources */,
 				8E227AB72BF367AD002C0D93 /* LoginView.swift in Sources */,
 				8E227ABC2BF37456002C0D93 /* String+.swift in Sources */,
@@ -352,6 +382,7 @@
 				8E227AC12BF39065002C0D93 /* SignUpViewModel.swift in Sources */,
 				8EDF99892BF2028F008E3085 /* APIError.swift in Sources */,
 				8EDF99992BF21FED008E3085 /* MarketCoinView.swift in Sources */,
+				8E227ACE2BF39F3C002C0D93 /* HTTPHeader.swift in Sources */,
 				8E227ABF2BF39045002C0D93 /* SignUpView.swift in Sources */,
 				8EDF998E2BF202C7008E3085 /* Error.swift in Sources */,
 				8E227AAD2BF25A9C002C0D93 /* TickerManager.swift in Sources */,
@@ -360,6 +391,7 @@
 				8E227AC32BF39137002C0D93 /* PointBorderTextField.swift in Sources */,
 				8E227AB42BF25BE0002C0D93 /* Ticker.swift in Sources */,
 				8EDF99912BF203B7008E3085 /* TargetType.swift in Sources */,
+				8E227AD22BF3A023002C0D93 /* PrivateKey.swift in Sources */,
 				8EDF99972BF20A85008E3085 /* Market.swift in Sources */,
 				8E227AB22BF25B49002C0D93 /* OrderbookViewModel.swift in Sources */,
 				8E227AA62BF226A5002C0D93 /* ButtonWrapper.swift in Sources */,
