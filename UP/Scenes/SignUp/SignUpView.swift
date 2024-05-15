@@ -18,7 +18,16 @@ struct SignUpView: View {
                 .frame(height: 50)
             
             SignUpText()
-
+            
+            // 1. 이메일 입력 후 다음 버튼 누르고 -> 중복확인 성공하면, passwordTextField hidden 해제, descriptionText 아래로 내려감
+            
+            // 2. 패스워드 입력 후 다음 버튼 누르면 -> 유효성 검증 -> 검증 성공하면, NicknameTextField Hidden 해제, emailTextField 아래로 내려감
+            
+            // 3. 닉네임 입력 후 다음 버튼 누르면 -> 유효성 검증 -> 검증 성공하면, 회원가입 네트워크 통신 .Post
+            
+            // 4. 회원가입 성공 시 회원가입 성공 화면 Push 되면서 3초 후 메인 화면
+            PointBorderTextField(placeholder: "닉네임을 입력하세요", text: $viewModel.nickname)
+            PointBorderTextField(placeholder: "패스워드를 입력하세요", text: $viewModel.password)
             PointBorderTextField(placeholder: "이메일을 입력하세요", text: $viewModel.email)
             
             DescriptionText(text: viewModel.output.errorDescription)

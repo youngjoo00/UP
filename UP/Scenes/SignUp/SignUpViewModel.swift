@@ -18,6 +18,8 @@ final class SignUpViewModel: ViewModelType {
     var output = Output()
     
     @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var nickname: String = ""
     
     init() {
         transform()

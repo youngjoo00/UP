@@ -17,7 +17,7 @@ final class LoginViewModel: ViewModelType {
     @Published
     var output = Output()
     
-    // 이게 맞나..? 점점 이상해지는데
+    // 이게 맞나..? 점점 이상해지는데,,
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isShowingSignUp = false
